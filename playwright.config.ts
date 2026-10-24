@@ -11,7 +11,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://practicesoftwaretesting.com',
     testIdAttribute: 'data-test',
-    headless: false,
+    headless: !!process.env.CI,
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
   },
